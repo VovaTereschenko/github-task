@@ -1,4 +1,5 @@
 import * as React from "react";
+import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { useDebounce } from "../hooks/useDebounce";
 
@@ -21,12 +22,18 @@ const DebouncedTextField = React.memo(
     }, [debouncedValue, onChange]);
 
     return (
-      <TextField
-        onChange={handleChange}
-        value={value}
-        variant="outlined"
-        fullWidth
-      />
+      <Box
+        sx={{
+          boxShadow: "0px -10px 36px rgb(0 0 0 / 20%)",
+        }}
+      >
+        <TextField
+          onChange={handleChange}
+          value={value}
+          variant="outlined"
+          fullWidth
+        />
+      </Box>
     );
   }
 );
