@@ -1,8 +1,11 @@
-const App = () => {
+import { ApolloClientProvider } from "./providers/ApolloClientProvider";
+import { GithubWidget } from "./views/GithubWidget";
+
+function App() {
   return (
-    <div>
-      Hello world
-    </div>
+    <ApolloClientProvider>
+      <GithubWidget />
+    </ApolloClientProvider>
   );
 }
 
