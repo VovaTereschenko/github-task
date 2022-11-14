@@ -7,12 +7,11 @@ import {
   InMemoryCache,
   ApolloProvider,
 } from "@apollo/client";
-
-const MY_READ_ONLY_TOKEN = "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";
+import { GITHUB_PERSONAL_ACCESS_TOKEN } from "../constants";
 
 const authLink = setContext(() => ({
   headers: {
-    Authorization: `bearer ${MY_READ_ONLY_TOKEN}`,
+    Authorization: `bearer ${GITHUB_PERSONAL_ACCESS_TOKEN}`,
   },
 }));
 
