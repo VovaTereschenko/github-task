@@ -1,16 +1,19 @@
-import { useQuery } from "@apollo/client";
-import { GITHUB_REPOSITORIES } from "../api/queries/github-repositories";
+import { useGithubRepositoriesRequest } from "../hooks/useGithubRepositoriesRequest";
 
 
 const GithubWidget = () => {
-  const { loading, error, data } = useQuery(GITHUB_REPOSITORIES, {
-    variables: {
-      searchValue: 'mui',
-      results: 10,
-    },
+  const searchValue = 'mui'
+  const resultsCount = 10
+  const {
+    loading,
+    error,
+    repositoryMap,
+  } = useGithubRepositoriesRequest({
+    searchValue,
+    resultsCount,
   });
 
-  console.log("data", data);
+  console.log("repositoryMap", repositoryMap);
 
   return (
     <div>Hello Github Widget</div>

@@ -8,7 +8,7 @@ import {
   ApolloProvider,
 } from "@apollo/client";
 
-const MY_READ_ONLY_TOKEN = "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";
+const MY_READ_ONLY_TOKEN = "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";
 
 const authLink = setContext(() => ({
   headers: {
