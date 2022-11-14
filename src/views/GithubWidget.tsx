@@ -1,8 +1,8 @@
 import * as React from "react";
-import { GithubWidgetLayout, RepositoriesListLayout } from "../layouts";
+import { GithubWidgetLayout } from "../layouts";
 import { useGithubRepositoriesRequest } from "../hooks/useGithubRepositoriesRequest";
 import { DebouncedTextField } from "../components/DebouncedTextField";
-import { RepositoriesList } from "../partials/RepositoriesList";
+import { Repositories } from "../renderers/Repositories";
 
 const GithubWidget = () => {
   const resultsCount = 10;
@@ -16,9 +16,10 @@ const GithubWidget = () => {
 
   return (
     <GithubWidgetLayout>
-      <RepositoriesListLayout>
-        <RepositoriesList repositoryMap={repositoryMap} />
-      </RepositoriesListLayout>
+      <Repositories
+        repositoryMap={repositoryMap}
+        additionalListItems={<>Pagination</>}
+      />
       <DebouncedTextField
         defaultValue={"mui"}
         onChange={(val: string) => {

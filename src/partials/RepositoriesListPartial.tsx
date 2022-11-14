@@ -15,7 +15,7 @@ const handleExternalRedirect = (url: string) => {
   window.open(url);
 };
 
-const RepositoriesList = ({
+const RepositoriesListPartial = ({
   repositoryMap,
 }: {
   repositoryMap?: IRepositoryInfo[];
@@ -41,4 +41,4 @@ const RepositoriesList = ({
   </List>
 );
 
-export { RepositoriesList };
+export { RepositoriesListPartial };
