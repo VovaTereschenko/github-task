@@ -14,7 +14,9 @@ const GithubWidget = () => {
 
   return (
     <div>
-      Hello Github Widget
+      {repositoryMap?.map((item: { name: string }) => (
+        <div>{item.name}</div>
+      ))}
       <DebouncedTextField
         defaultValue={"mui"}
         onChange={(val: string) => {
