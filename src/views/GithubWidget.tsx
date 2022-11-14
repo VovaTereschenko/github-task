@@ -1,4 +1,5 @@
 import * as React from "react";
+import { GithubWidgetLayout } from "../layouts";
 import { useGithubRepositoriesRequest } from "../hooks/useGithubRepositoriesRequest";
 import { DebouncedTextField } from "../components/DebouncedTextField";
 
@@ -13,7 +14,7 @@ const GithubWidget = () => {
   console.log("repositoryMap", repositoryMap);
 
   return (
-    <div>
+    <GithubWidgetLayout>
       {repositoryMap?.map((item: { name: string }) => (
         <div>{item.name}</div>
       ))}
@@ -23,7 +24,7 @@ const GithubWidget = () => {
           setSearchValue(val);
         }}
       />
-    </div>
+    </GithubWidgetLayout>
   );
 };
 
