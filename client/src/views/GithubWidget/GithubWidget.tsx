@@ -1,12 +1,13 @@
 import * as React from "react";
-import { GithubWidgetLayout } from "../layouts";
-import { ShowMorePartial, TextFieldPartial } from "../partials";
-import { Repositories } from "../renderers/Repositories";
-import { useGithubRepositoriesRequest } from "../hooks/useGithubRepositoriesRequest";
-
-const DEFAULT_SEARCH_VALUE = "Material UI";
-const DEFAULT_RESULTS_COUNT = 10;
-const EXCESSIVE_PAGINATION = 100;
+import { GithubWidgetLayout } from "../../layouts";
+import { ShowMorePartial, TextFieldPartial } from "../../partials";
+import { Repositories } from "../../renderers/Repositories";
+import { useGithubRepositoriesRequest } from "../../hooks/useGithubRepositoriesRequest";
+import {
+  DEFAULT_SEARCH_VALUE,
+  DEFAULT_RESULTS_COUNT,
+  EXCESSIVE_PAGINATION,
+} from "../../constants";
 
 const GithubWidget = () => {
   const [searchValue, setSearchValue] = React.useState(DEFAULT_SEARCH_VALUE);

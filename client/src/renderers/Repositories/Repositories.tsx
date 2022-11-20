@@ -1,8 +1,8 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import { RepositoriesListPartial, ErrorPartial } from "../partials";
-import { RepositoriesListLayout } from "../layouts";
-import { IGithubReposList } from "../types";
+import { RepositoriesListPartial, ErrorPartial } from "../../partials";
+import { RepositoriesListLayout } from "../../layouts";
+import { IGithubReposList } from "../../types";
 
 const Repositories = React.memo(
   ({

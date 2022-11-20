@@ -1,5 +1,6 @@
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
+import { SHOW_MORE_BUTTON_TEXT } from "../constants";
 
 const ShowMorePartial = ({
   onClick,
@@ -16,7 +17,7 @@ const ShowMorePartial = ({
         disabled={isDisabled}
         onClick={onClick}
       >
-        Show more
+        {SHOW_MORE_BUTTON_TEXT}
       </Button>
     </Box>
   );

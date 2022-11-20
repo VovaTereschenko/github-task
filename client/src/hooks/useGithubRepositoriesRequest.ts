@@ -11,7 +11,7 @@ const useGithubRepositoriesRequest = ({
   const { loading, error, data } = useQuery(GITHUB_REPOSITORIES, {
     variables: {
       searchValue,
-      results: resultsCount,
+      resultsCount,
     },
   });
 

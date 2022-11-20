@@ -7,6 +7,15 @@ enum IconType {
   Fork = "fork",
 }
 
+const iconParametersMap = {
+  star: {
+    icon: <StarIcon sx={{ color: "#ffcc12" }} />,
+  },
+  fork: {
+    icon: <ForkRightIcon sx={{ color: "#aa5a5a" }} />,
+  },
+};
+
 const IconWithCounter = ({
   type,
   count,
@@ -14,18 +23,9 @@ const IconWithCounter = ({
   type: IconType;
   count: number;
 }) => {
-  const parametersMap = {
-    star: {
-      icon: <StarIcon sx={{ color: "#ffcc12" }} />,
-    },
-    fork: {
-      icon: <ForkRightIcon sx={{ color: "#aa5a5a" }} />,
-    },
-  };
-
   return (
     <Box sx={{ display: "flex", alignItems: "center" }}>
-      {parametersMap[type].icon} {count}
+      {iconParametersMap[type].icon} {count}
     </Box>
   );
 };

@@ -5,10 +5,6 @@ import ListItemText from "@mui/material/ListItemText";
 import { IconWithCounter, IconType } from "../components";
 import { IRepositoryInfo } from "../types";
 
-const handleExternalRedirect = (url: string) => {
-  window.open(url);
-};
-
 const RepositoriesListPartial = ({
   repositoryMap,
 }: {
@@ -22,8 +18,10 @@ const RepositoriesListPartial = ({
   >
     {repositoryMap?.map(({ forkCount, name, stargazerCount, url }) => (
       <ListItemButton
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
         key={url}
-        onClick={() => handleExternalRedirect(url)}
         sx={{ borderBottom: "1px solid #e0e0e0" }}
       >
         <ListItemText>{name}</ListItemText>

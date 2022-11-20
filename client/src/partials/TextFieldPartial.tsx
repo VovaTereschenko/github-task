@@ -6,14 +6,12 @@ const TextFieldPartial = ({
   defaultValue,
   onChange,
   isLoading,
-  testId,
 }: {
   defaultValue: string;
   onChange: (value: string) => void;
   isLoading?: boolean;
-  testId?: string;
 }) => (
-  <Box sx={{ zIndex: 1, position: "relative" }} data-testid={testId}>
+  <Box sx={{ zIndex: 1, position: "relative" }}>
     <LinearProgress
       sx={{
         visibility: isLoading ? "visible" : "hidden",

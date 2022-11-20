@@ -1,7 +1,6 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-
-const SOMETHING_WENT_WRONG = "Noop! ;)";
+import { SOMETHING_WENT_WRONG_MESSAGE } from "../constants";
 
 const ErrorPartial = () => (
   <Box
@@ -17,7 +16,7 @@ const ErrorPartial = () => (
         textAlign: "center",
       }}
     >
-      {SOMETHING_WENT_WRONG}
+      {SOMETHING_WENT_WRONG_MESSAGE}
     </Typography>
   </Box>
 );
