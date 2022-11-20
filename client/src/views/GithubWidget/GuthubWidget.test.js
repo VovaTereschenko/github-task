@@ -43,7 +43,7 @@ const mocks = [
   },
 ];
 
-describe("should works with github API", () => {
+describe("should work with github API", () => {
   it("should reflect loading state correctly", async () => {
     render(
       <MockedProvider mocks={mocks}>
